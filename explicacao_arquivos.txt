@@ -1,0 +1,7 @@
+app.json - Configurações
+babel.config.js - Esta fazendo o javascript crescer bastante. Converte para a versão que roda.
+package.json - Guarda as dependencias
+package-lock.json - Guarda as versões
+
+core - Proprio
+nativo - quando é convertido para a linguagem
