@@ -1,0 +1,18 @@
+Baixa Bibliotecas de navegação entre telas
+npm install @react-navigation/native @react-navigation/native-stack - (São dua bibliotecas)
+
+----------------
+import {createNativeStackNavigator } from '@react-navigation/native-stack' - Usa no Stack.ks
+import { NavigationContainer } from '@react-navigation/native' - Usa em App.js
+
+-----------
+npm install - para instalar o que baixou
+
+
+
+
+
+
+Dica cao o expo esteja dando erro:
+cd AppData\Roaming\npm
+expo start x:\react-native\app6
