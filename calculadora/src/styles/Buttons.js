@@ -1,24 +1,20 @@
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
+    display: {
+        flex: 2,
+        backgroundColor: '#fff'
+    },
     buttons: {
         // display: 'flex',
         flex: 1,
-        flexDirection: 'row-reverse',
-    },
-    display: {
-        flex: 2
+        flexDirection: 'row',
     },
     button: {
-        flex: 1,
-        backgroundColor: '#000',
-        // alignContent: 'center',
-        textAlign: 'center',
-        color: '#fff',
-        // borderEndColor: 'solid white',
-        // borderStyle: 'solid',
-        // borderColor: '#fff',
-        fontWeight: 'bolder',
-        fontSize: 20
+        // flex: 1,
+        // backgroundColor: '#000',
+        // fontWeight: 'bolder',
+        // fontSize: 20,
+        // borderRadius: '100%'
     },
 })

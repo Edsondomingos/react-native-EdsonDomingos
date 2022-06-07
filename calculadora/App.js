@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { View,Text } from 'react-native';
 import Calculadora from './src/components/Calculadora'
 import Styles from './src/styles/styles'
 
