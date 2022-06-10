@@ -2,8 +2,11 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
     display: {
-        flex: 2,
+        flex: 1,
         backgroundColor: '#fff',
-        fontSize: 50,
+        // fontSize: 100,
+        // fontWeight: 'bolder',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
     },
 })
