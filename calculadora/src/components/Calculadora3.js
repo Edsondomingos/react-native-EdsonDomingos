@@ -8,13 +8,9 @@ const novaLista = []
 export default function Calculadora(){
     const [numeros, setNumeros] = useState([])
     
-    // const teclas1 = ['C','()','%','+','7','8','9','-','4','5','6',
-    // '/','1','2','3','x','+/-','0',',','=']
-    const teclas1 = ['C','()','%','+']
-    const teclas2 = ['7','8','9','-']
-    const teclas3 = ['4','5','6','/']
-    const teclas4 = ['1','2','3','x']
-    const teclas5 = ['+/-','0',',','=']
+    const teclas1 = ['C','()','%','+','7','8','9','-','4','5','6',
+    '/','1','2','3','x','+/-','0',',','=']
+
 
     function resultado(){
         let res = novaLista.join('')
@@ -41,45 +37,28 @@ export default function Calculadora(){
                 <Text>{numeros}</Text>
                 {/* {console.log(novaLista)} */}
             </View>
-            <View style={Buttons.buttons}>
+            {/* <View style={Buttons.buttons}>
                 {teclas1.map((element,index) => 
                     {
                         return <Button key={index} title={element}  style={Buttons.button} onPress={() => addNumero(element)} />
                      }
                 )}
-            </View>
-
-            <View style={Buttons.buttons}>
-                {teclas2.map((element,index) => 
+            </View> */}
+            
+                {teclas1.map((element,index) => 
                     {
-                        return <Button key={index} title={element} onPress={() => addNumero(element)}/>
-                    }
+                        
+                        if(index+1 % 4 != 0){
+                            return (
+                            <View style={Buttons.buttons}>
+                                <Button key={index} title={element}  style={Buttons.button} onPress={() => addNumero(element)} />
+                            </View>
+                            )
+                        }
+                        
+                     }
                 )}
-            </View>
-
-            <View style={Buttons.buttons}>
-                {teclas3.map((element,index) => 
-                    {
-                        return <Button key={index} title={element} onPress={() => addNumero(element)}/>
-                    }
-                )}
-            </View>
-
-            <View style={Buttons.buttons}>
-                {teclas4.map((element,index) => 
-                    {
-                        return <Button key={index} title={element} onPress={() => addNumero(element)}/>
-                    }
-                )}
-            </View>
-
-            <View style={Buttons.buttons}>
-                {teclas5.map((element,index) => 
-                    {
-                        return <Button key={index} title={element} onPress={() => addNumero(element)}/>
-                    }
-                )}
-            </View>
+            
             
         </>
     )

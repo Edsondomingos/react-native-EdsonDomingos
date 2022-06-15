@@ -5,8 +5,7 @@ import Buttons from '../styles/Buttons'
 
 const novaLista = []
 
-export default function Calculadora(){
-    const [numeros, setNumeros] = useState([])
+export default function Calculadora(){  
     
     // const teclas1 = ['C','()','%','+','7','8','9','-','4','5','6',
     // '/','1','2','3','x','+/-','0',',','=']
@@ -16,6 +15,8 @@ export default function Calculadora(){
     const teclas4 = ['1','2','3','x']
     const teclas5 = ['+/-','0','.','=']
 
+    const [numeros, setNumeros] = useState([])
+
     function resultado(){
         // let res
         // for(let i=0;i<novaLista.length;i++){
@@ -24,7 +25,12 @@ export default function Calculadora(){
         // return res
         let res = novaLista.join('')
         console.log(typeof res)
-        return res
+        // return res
+        setNumeros(res)
+    }
+
+    function Tela(){
+        return <Text onChangeText={setNumeros}>{numeros}</Text>
     }
     
     function addNumero(element) {
@@ -39,20 +45,24 @@ export default function Calculadora(){
             ){
             novaLista.push(element)
             
-            console.log(numeros, novaLista)
+            // console.log(numeros, novaLista)
             
         }
         if(element == '='){
             resultado()
         }
         setNumeros(novaLista)
+        Tela()
     }
-
+    const teste = ['555',112]
     return (
         <>
             <View style={Display.display}>
-                <Text>{numeros}</Text>
-                {/* {console.log(novaLista)} */}
+                <Tela/><Text>{numeros}</Text>
+                {/* <Text>{() => novaLista.map(element => element)}</Text> */}
+                {/* <Text>{() => novaLista.forEach(element => element)}</Text> */}
+                {/* <Text>{teste}</Text> */}
+                {console.log(numeros)}
             </View>
             <View style={Buttons.buttons}>
                 {teclas1.map((element,index) => 
@@ -60,7 +70,7 @@ export default function Calculadora(){
                         return (
                             <TouchableHighlight 
                                 style={Buttons.button}
-
+                                // onPress={() => addNumero(element)}
                             >
                                 <Text key={index} style={Buttons.detalhe}>{element}</Text>
                             </TouchableHighlight>
@@ -78,7 +88,26 @@ export default function Calculadora(){
                         return (
                             <TouchableHighlight 
                                 style={Buttons.button}
-
+                                // onPress={() => addNumero(element)}
+                                onPress={() => {
+                                    if(
+                                        element != '=' &&
+                                        element != 'C' &&
+                                        element != '()' &&
+                                        element != '%' &&
+                                        element != '+/-'
+                                        ){
+                                        novaLista.push(element)
+                                        setNumeros(novaLista)
+                                        console.log(numeros, novaLista)
+                                        
+                                    }
+                                    if(element == '='){
+                                        resultado()
+                                    }
+                                    
+                                    }
+                                }
                             >
                                 <Text key={index} style={Buttons.detalhe}>{element}</Text>
                             </TouchableHighlight>
@@ -93,7 +122,7 @@ export default function Calculadora(){
                         return (
                             <TouchableHighlight 
                                 style={Buttons.button}
-
+                                onPress={() => addNumero(element)}
                             >
                                 <Text key={index} style={Buttons.detalhe}>{element}</Text>
                             </TouchableHighlight>
@@ -108,7 +137,7 @@ export default function Calculadora(){
                         return (
                             <TouchableHighlight 
                                 style={Buttons.button}
-
+                                onPress={() => addNumero(element)}
                             >
                                 <Text key={index} style={Buttons.detalhe}>{element}</Text>
                             </TouchableHighlight>
@@ -123,7 +152,7 @@ export default function Calculadora(){
                         return (
                             <TouchableHighlight 
                                 style={Buttons.button}
-
+                                onPress={() => addNumero(element)}
                             >
                                 <Text key={index} style={Buttons.detalhe}>{element}</Text>
                             </TouchableHighlight>
