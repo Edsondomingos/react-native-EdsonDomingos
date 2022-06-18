@@ -9,13 +9,18 @@ export default StyleSheet.create({
         backgroundColor:'blue'
     },
     button: {
-        // display: 'none',
-        // flex: 1,
-        // backgroundColor: 'blue',
-        // color: 'red', //Funciona(aparentemente)
-        // fontWeight: 'bolder',
-        // fontSize: 20,
-        // borderRadius: '100%'
-        // width:
+        flex: 1,
     },
+    detalhe: {
+        display: 'flex',
+        flex: 1,
+        backgroundColor: '#aaa',
+        padding: 1,
+        margin: 1,
+        borderColor: '#000',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: 30,
+        color: '#fff'
+    }
 })

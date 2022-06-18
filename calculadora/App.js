@@ -1,6 +1,7 @@
 import { View,Text } from 'react-native';
 import Calculadora from './src/components/Calculadora'
 import Calculadora2 from './src/components/Calculadora2'
+import Calculadora3 from './src/components/Calculadora3'
 import Styles from './src/styles/styles'
 
 export default function App() {
