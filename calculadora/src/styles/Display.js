@@ -1,12 +1,18 @@
-import { StyleSheet } from 'react-native'
+import * as React from 'react';
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     display: {
-        flex: 1,
+        flex: 4,
         backgroundColor: '#fff',
-        // fontSize: 100,
-        // fontWeight: 'bolder',
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
+    },
+    digitos: {
+      display: 'flex',
+      fontSize: 40,
+      fontWeight: 'bold',
+      color: '#777',
+      flexWrap: 'wrap',      
     },
 })

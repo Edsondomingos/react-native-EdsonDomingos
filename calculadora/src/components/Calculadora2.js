@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {useState} from 'react'
 import { View, Text, Button, TouchableHighlight } from 'react-native'
 import Display from '../styles/Display'
