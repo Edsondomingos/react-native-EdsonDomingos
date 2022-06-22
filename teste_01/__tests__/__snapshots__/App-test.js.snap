@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Teste de Snapshot Criação de snapshot 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "fontSize": 30,
+        "textAlign": "center",
+      }
+    }
+    testID="TextTitulo"
+  >
+    Digite um numero
+  </Text>
+  <TextInput
+    placeholder="Digite aqui"
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "margin": 10,
+        "outline": 0,
+        "padding": 10,
+      }
+    }
+    testID="TextInputEntrada"
+  />
+  <View
+    accessibilityRole="button"
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="Button"
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "margin": 8,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Calcular
+      </Text>
+    </View>
+  </View>
+</View>
+`;

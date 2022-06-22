@@ -1,0 +1,51 @@
+Instalo yarn
+npm install --global yarn
+
+criou o projeto
+expo init teste_01
+
+Instala biblioteca de testes
+expo install jest-expo jest
+yarn add react-test-renderer@17 --dev
+
+Adiciona script de test
+Adiciona o package.json(Colocou a baixo da propriedade DevDependencies)
+"jest": {
+  "preset": "jest-expo",
+  "transformIgnorePatterns": [
+    "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+  ]
+}
+
+Cria diretorio na raiz chamado "__tests__"
+exemplo de nome de arquivos dentro deste diretorio
+Exemplo-test.js
+Conteudo:
+function soma(num, num2){
+    return num + num2
+}
+
+// função do react native que aciona o jest instalado
+test('Soma com Positivos', () => {
+    expect((soma(5,3))).toBe(8)
+})
+
+teste com snapshot - RECOMENDADO COMEÇAR COM SNAPSHOT
+baixar biblioteca de teste
+npm install yarn add --dev @testing-library/react-native
+Exemplo:
+import renderer from "react-test-renderer";
+import App from '../App'
+
+describe('Teste de Snapshot', () => {
+    it('Criação de snapshot', () => {
+        const inicial = renderer.create(<App />).toJSON()
+        expect(inicial).toMatchSnapshot();
+    })
+})
+
+Se alterar o arquivo original, no caso App, precisa executar o comando
+npm run teste -u(npm run teste -- -u, se estiver no VSCode) - Atualiza o snapshot
+
+para testar 
+No CMD npm run test
