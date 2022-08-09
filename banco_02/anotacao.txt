@@ -1,0 +1,2 @@
+- baixou o .zip no classroom. Codigo em app e arquivo de configuração em src
+- Copiou o codigo da api do firebase para dentro do arquivo de configuração
