@@ -9,7 +9,7 @@ export default function App() {
   const [ nome, setNome ] = useState('')
   const [ nomes, setNomes ] = useState('')
 
-  setId(listar())
+  // listar()
 
   function cadastrar(){
     //setDoc(doc(db, "contatos", "LA"), {
@@ -30,7 +30,7 @@ export default function App() {
     const nomesSnapshot = await getDocs(nomesCol);
     const nomesList = nomesSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     setNomes(nomesList);
-    return nomesList.length
+    setId( nomesList.length)
   }
   console.log(nomes.length)
   
